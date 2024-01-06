@@ -1,5 +1,5 @@
 # [Telefonszám ellenőrző](https://github.com/kovacs-balazs/gyvakk-telefonszam)
----
+
 A szoftver a felhasználó által megadott telefonszámot ellenőrzi le a különböző szempontok alapján. Először az országazonosító előtagot veszi figyelembe először, ez alapján meghatározza, hogy a telefonszám pontosan melyik országhoz tartozik. Forrás hiányában a program nem tudja meghatározni a külföldi országok telefonszolgáltatóját. Másodszor magyar telefonszám esetén a telefonszám szolgáltatója meghatározásra, majd ez egy szótárba lementésre kerül. Amennyiben a telefonszám magyar, de a szolgáltatóját nem lehetett meghatározni, akkor a program 'Unknown' névvel fogja tovább kezelni a telefonszámot. A program bementként elfogad .txt kiterjesztésű fájlt, illetve felhasználó által beírt telefonszámot is. A bemenet megadása mind grafikus, mind konzolos módon támogatott. 
 
 **Nemzetközi telefonszámok listája:**
@@ -14,7 +14,7 @@ https://gist.github.com/ally-commits/9073ff23fc7f96fab1290fdec22775bc
 | [Vodafone](https://www.vodafone.hu/) | 70 |
 
 ## Használat
----
+
 ### Grafikus Felhasználói Felület
 #### Indítóparancs:
 ```
@@ -39,7 +39,7 @@ A szoftver elindítása után először meg kell adni az ellenőrizni kívánt t
 | `list` | Szolgáltatók kilistázása |
 
 ## Beállítások
----
+
   Az indítóparancs utáni argumentumok segítségével egyszerűen konfigurálhatóak a szoftver beállításai. Több argumentum is megadható egyszerre az indítóparancsban. Az argumentumok sorrendje felcserélhető. A kerekítés kikapcsolása felülírja a kerekítési értéket, így nem ajánlott egyszerre mindkét argumentum használata.
 
 | Argumentum | Beállítás | Példa |
