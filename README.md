@@ -5,7 +5,7 @@ A szoftver a felhasználó által megadott telefonszámot ellenőrzi le különb
 **Nemzetközi telefonszámok listája:**
 https://gist.github.com/ally-commits/9073ff23fc7f96fab1290fdec22775bc
 
-**Magyarországi szolgáltatok és azok előtagjainak táblázata:**
+**Magyarországi szolgáltatók és azok előtagjainak táblázata:**
 | Szolgáltató | Mobilszám |
 | :---: | :---: |
 | [Yettel](https://www.yettel.hu/) | 20 |
