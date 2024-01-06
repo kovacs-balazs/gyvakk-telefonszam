@@ -6,7 +6,7 @@ A szoftver a felhasználó által megadott telefonszámot ellenőrzi le a külö
 https://gist.github.com/ally-commits/9073ff23fc7f96fab1290fdec22775bc
 
 **Magyarországi szolgáltatok és azok előtagjainak táblázata:**
-| Szolgáltató | Előtag |
+| Szolgáltató | Mobilszám |
 | :---: | :---: |
 | [Yettel](https://www.yettel.hu/) | 20 |
 | [Telekom](https://www.telekom.hu/) | 30 |
