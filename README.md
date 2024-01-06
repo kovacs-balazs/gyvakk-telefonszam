@@ -1,4 +1,4 @@
-# [Telefonszám ellenörző](https://github.com/kovacs-balazs/gyvakk-telefonszam)
+# [Telefonszám ellenőrző](https://github.com/kovacs-balazs/gyvakk-telefonszam)
 
 A szoftver a felhasználó által megadott telefonszámot ellenőrzi le a különböző szempontok alapján. Először az országazonosító előtagot veszi figyelembe először, ez alapján meghatározza, hogy a telefonszám pontosan melyik országhoz tartozik. Forrás hiányában a program nem tudja meghatározni a külföldi országok telefonszolgáltatóját. Másodszor magyar telefonszám esetén a telefonszám szolgáltatója meghatározásra, majd ez egy szótárba lementésre kerül. Amennyiben a telefonszám magyar, de a szolgáltatóját nem lehetett meghatározni, akkor a program 'Unknown' névvel fogja tovább kezelni a telefonszámot. A program bementként elfogad .txt kiterjesztésű fájlt, illetve felhasználó által beírt telefonszámot is. A bemenet megadása mind grafikus, mind konzolos módon támogatott. 
 
