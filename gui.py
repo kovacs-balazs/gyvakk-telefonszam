@@ -5,7 +5,7 @@ from phone_number import mobile_operators_counter
 
 
 def check_phonenumber(phone_number: str):
-    phonenumber = Phonenumber(phone_number.strip("\n"))
+    phonenumber: Phonenumber = Phonenumber(phone_number.strip("\n"))
     phonenumber.record()
 
 
@@ -19,6 +19,7 @@ def __display_mobile_operator_count():
 
 def select_file():
     file_paths = window.splitlist(filedialog.askopenfilenames(parent=window, title="Válaszd ki a fájlt",  initialdir=".", filetypes=[('Text files', '*.txt')]))
+    mobile_operators_counter: dict[str, int] = {"Yettel": 0, "Telekom": 0, "Digi": 0, "Vodafone": 0, "Unknown": 0}
     for path in file_paths:
         with open(path) as f:
             for line in f:

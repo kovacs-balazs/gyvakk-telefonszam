@@ -16,10 +16,10 @@ my_parser.add_argument("--file", action="store", type=argparse.FileType('r'), he
 with open("phone_number_countries.json") as f:
     countries_json = json.loads(f.read())
     for country in countries_json:
-        phone_c = PhoneCountry(country["code"], country["label"], country["phone"], country['phoneLength'])
+        phone_c: PhoneCountry = PhoneCountry(country["code"], country["label"], country["phone"], country['phoneLength'])
         phc.phone_countries[phone_c.code] = phone_c
 
-phc.phone_countries = phc.get_sorted_countries()
+phc.phone_countries: dict[str, PhoneCountry] = phc.get_sorted_countries()
 
 args = my_parser.parse_args()
 if args.autogenerate:
@@ -30,20 +30,21 @@ if args.autogenerate:
     phoneGen.generate_valid_hungary()
     phoneGen.write_to_file()
 
+if not args.file is None:
+    for line in args.file:
+        phonenumber: Phonenumber = Phonenumber(line.strip("\n"))
+        phonenumber.record()
+
 if args.nogui:
     while True:
         input_phone_number: str = input("Adj meg egy telefonszámot.\n")
-        if input_phone_number.lower() == "exit":
+        if input_phone_number.lower().strip() == "exit":
             exit()
-        elif input_phone_number.lower() == "list":
+        elif input_phone_number.lower().strip() == "list":
             print(mobile_operators_counter)
         else:
-            phonenumber = Phonenumber(input_phone_number.strip("\n"))
+            phonenumber: str = Phonenumber(input_phone_number.strip("\n"))
             phonenumber.record()
-elif not args.file is None:
-    for line in args.file:
-        phonenumber = Phonenumber(line.strip("\n"))
-        phonenumber.record()
 else:
     import gui
     gui.open_gui()

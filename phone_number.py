@@ -18,7 +18,7 @@ class Phonenumber:
             self.instant_invalid = True
             return
         
-        self.phone_number = self.phone_number.replace("+", "", 1)
+        self.phone_number: str = self.phone_number.replace("+", "", 1)
 
         if not self.phone_number.strip().isdecimal():
             self.instant_invalid: bool = True

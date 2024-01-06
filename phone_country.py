@@ -55,8 +55,8 @@ class HungaryPhoneManager:
             return False
         
         try:
-            assert int(self.phone_number_short[0:2])
-        except AssertionError:
+            int(self.phone_number_short[0:2])
+        except ValueError:
             print(f"Hibás telefonszám: {self.original_phone_number}")
             return False
         return True
